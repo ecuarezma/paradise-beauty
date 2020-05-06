@@ -5,7 +5,9 @@ function App() {
   return (
     <div className="container">
       <div className="jumbotron">
-        <h1>Hello from React App!</h1>
+        <header className="title">
+          <h1>Hello from React App!</h1>
+        </header>
       </div>
     </div>
   );
