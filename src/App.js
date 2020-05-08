@@ -2,6 +2,9 @@ import React from "react";
 import "./App.css";
 
 function App() {
+  fetch("/user")
+    .then((res) => res.json())
+    .then((data) => console.log(data));
   return (
     <div className="container">
       <div className="jumbotron">
