@@ -6,7 +6,9 @@ import salonChairs from "../../../assets/unsplash/salonchairs.jpg";
 const Home = () => {
   return (
     <div className={classes.Home}>
-      <img src={salonChairs} alt="Row of salon chairs facing away" />
+      <div className={classes.bgImage}>
+        <img src={salonChairs} alt="Row of salon chairs facing away" />
+      </div>
     </div>
   );
 };

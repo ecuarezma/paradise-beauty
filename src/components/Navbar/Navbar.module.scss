@@ -1,3 +1,5 @@
+$navText: rgb(230, 234, 250);
+
 .Navbar {
   position: fixed;
   top: 0;
@@ -6,29 +8,53 @@
 }
 
 .Nav {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 60%;
-  font-size: 1.5rem;
-  // background-color: rgba(229, 229, 250, 0.7);
+  font-size: 1.8rem;
   background: rgba(229, 229, 250, 0.5);
   background-image: linear-gradient(
     120deg,
     rgb(205, 206, 202),
-    rgba(83, 25, 25, 0.4) 90%
+    rgba(87, 56, 82, 0.4)
   );
-  border-radius: 0 5px 0 0;
+  border-radius: 0 5px 5px 0;
   box-shadow: 0.5rem 0 1rem rgba(57, 57, 57, 0.5);
+  transform: translateX(-100%);
+  transition: all 300ms ease-in;
+
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
   li {
+    margin: 1rem 0;
+    color: $navText;
+    text-shadow: rgba(57, 57, 57, 0.5) 1px 0 1rem;
     padding-left: 1rem;
   }
 }
 
 .bars {
+  color: $navText;
   margin-left: 1rem;
+  font-size: 2.5rem;
+}
+
+.times {
+  display: flex;
+  justify-content: flex-end;
   font-size: 2rem;
+  color: $navText;
+  svg {
+    margin: 1rem 1rem 0 0;
+  }
+}
+
+.isActive {
+  transform: translateX(0);
+  transition: all 300ms ease-out;
 }

@@ -1,10 +1,15 @@
 .Home {
   display: flex;
-  justify-content: center;
+  flex-flow: column nowrap;
   margin: 0 auto;
+}
+.bgImage {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  filter: brightness(0.8);
   overflow: hidden;
   img {
-    height: 100vh;
-    filter: brightness(0.8);
+    height: 100%;
   }
 }
