@@ -19,10 +19,10 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faTimes} onClick={handleClick} />
         </div>
         <ul>
-          <li>home</li>
-          <li>appointments</li>
-          <li>services</li>
-          <li>shop</li>
+          <li>Home</li>
+          <li>Appointments</li>
+          <li>Services</li>
+          <li>Shop</li>
         </ul>
       </div>
     </nav>

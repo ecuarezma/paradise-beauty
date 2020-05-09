@@ -1,7 +1,21 @@
+@import "../../styles/colorset";
+
 .Home {
   display: flex;
   flex-flow: column nowrap;
   margin: 0 auto;
+}
+.header {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  z-index: 100;
+  color: $textPrimary;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  h1 {
+    font-size: 3rem;
+  }
 }
 .bgImage {
   display: flex;
