@@ -10,8 +10,8 @@ const Navbar = () => {
   };
   return (
     <nav className={classes.Navbar}>
-      <div className={classes.bars} onClick={handleClick}>
-        <FontAwesomeIcon icon={faBars} />
+      <div className={classes.bars}>
+        <FontAwesomeIcon icon={faBars} onClick={handleClick} />
       </div>
 
       <div className={`${classes.Nav} ${isActive && classes.isActive} `}>
