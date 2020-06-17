@@ -1,15 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Navbar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [isActive, setActive] = useState(false);
+  const [isScrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    //add event listener
+    const scroll = (e) => {
+      const el = document.querySelector("nav");
+      if (e.target.documentElement.scrollTop > el.offsetHeight) {
+        setScrolled(true);
+      } else setScrolled(false);
+      console.log(e.target.documentElement.scrollTop);
+    };
+    document.addEventListener("scroll", scroll);
+    //clean up function, remove event listener
+    return () => document.removeEventListener("scroll", scroll);
+  });
+
   const handleClick = () => {
     setActive(!isActive);
   };
+
   return (
-    <nav className={classes.Navbar}>
+    <nav className={`${classes.Navbar} ${isScrolled && classes.scrolled}`}>
       <div className={classes.bars}>
         <FontAwesomeIcon icon={faBars} onClick={handleClick} />
       </div>
