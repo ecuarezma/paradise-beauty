@@ -4,15 +4,6 @@ import classes from "./Footer.module.scss";
 const Footer = ({ language }) => {
   const setLanguage = (lang) => {
     switch (lang) {
-      case "English":
-        return {
-          hours: "Hours",
-          location: "Location",
-          weekdays: "Monday - Friday",
-          saturday: "Saturday",
-          sunday: "Sunday",
-          closed: "closed",
-        };
       case "Spanish":
         return {
           hours: "Horas",
@@ -21,6 +12,15 @@ const Footer = ({ language }) => {
           saturday: "Sabado",
           sunday: "Domingo",
           closed: "cerrado",
+        };
+      default:
+        return {
+          hours: "Hours",
+          location: "Location",
+          weekdays: "Monday - Friday",
+          saturday: "Saturday",
+          sunday: "Sunday",
+          closed: "closed",
         };
     }
   };

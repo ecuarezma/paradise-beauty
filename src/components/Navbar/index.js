@@ -8,7 +8,6 @@ const Navbar = ({ language, setLang }) => {
   const [isScrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    //add event listener
     const scroll = (e) => {
       const el = document.querySelector("nav");
       if (e.target.documentElement.scrollTop > el.offsetHeight) {
@@ -16,9 +15,14 @@ const Navbar = ({ language, setLang }) => {
       } else setScrolled(false);
       // console.log(e.target.documentElement.scrollTop);
     };
+    //add event listeners
+    document.addEventListener("touchmove", scroll); // for mobile
     document.addEventListener("scroll", scroll);
     //clean up function, remove event listener
-    return () => document.removeEventListener("scroll", scroll);
+    return () => {
+      document.removeEventListener("touchmove", scroll);
+      document.removeEventListener("scroll", scroll);
+    };
   });
 
   const handleClick = () => {

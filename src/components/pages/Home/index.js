@@ -6,13 +6,13 @@ import salonChairs from "../../../assets/unsplash/salonchairs.jpg";
 const Home = ({ language }) => {
   const setLanguage = (lang) => {
     switch (lang) {
-      case "English":
-        return {
-          subtitle: "under construction",
-        };
       case "Spanish":
         return {
-          subtitle: "bajo construción",
+          subtitle: "bajo construcción",
+        };
+      default:
+        return {
+          subtitle: "under construction",
         };
     }
   };
