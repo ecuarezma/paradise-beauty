@@ -31,10 +31,17 @@ const Footer = ({ language }) => {
     <footer className={classes.Footer}>
       <div className={classes.schedule}>
         <h4>{hours}: </h4>
-        <p>{weekdays}: 9am - 7pm</p>
-        <p>{saturday}: 9am - 6pm</p>
         <p>
-          {sunday}: {closed}
+          {weekdays}: <span>9am - 7pm</span>
+        </p>
+        <p>
+          {saturday}: <span>9am - 6pm</span>
+        </p>
+        <p>
+          {sunday}:{" "}
+          <span>
+            <em>{closed}</em>
+          </span>
         </p>
       </div>
       <div className={classes.location}>
