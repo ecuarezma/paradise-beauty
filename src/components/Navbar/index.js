@@ -7,20 +7,35 @@ const Navbar = ({ language, setLang }) => {
   const [isActive, setActive] = useState(false);
   const [isScrolled, setScrolled] = useState(false);
 
+  const setLanguage = (lang) => {
+    switch (lang) {
+      case "Spanish":
+        return {
+          list: ["Inicio", "Citas", "Servicios", "Tienda"],
+        };
+      default:
+        return {
+          list: ["Home", "Appointments", "Services", "Shop"],
+        };
+    }
+  };
+
+  let { list } = setLanguage(language);
+  let navMenu = list.map((li) => <li key={li}>{li}</li>);
+
   useEffect(() => {
     const scroll = (e) => {
       const el = document.querySelector("nav");
       if (e.target.documentElement.scrollTop > el.offsetHeight) {
+        // check scrollTop element to see if there's one that works on mobile or iOS
         setScrolled(true);
       } else setScrolled(false);
       // console.log(e.target.documentElement.scrollTop);
     };
     //add event listeners
-    document.addEventListener("touchmove", scroll); // for mobile
     document.addEventListener("scroll", scroll);
     //clean up function, remove event listener
     return () => {
-      document.removeEventListener("touchmove", scroll);
       document.removeEventListener("scroll", scroll);
     };
   });
@@ -49,12 +64,7 @@ const Navbar = ({ language, setLang }) => {
         <div className={classes.times}>
           <FontAwesomeIcon icon={faTimes} onClick={handleClick} />
         </div>
-        <ul>
-          <li>Home</li>
-          <li>Appointments</li>
-          <li>Services</li>
-          <li>Shop</li>
-        </ul>
+        <ul>{navMenu}</ul>
       </div>
     </nav>
   );
