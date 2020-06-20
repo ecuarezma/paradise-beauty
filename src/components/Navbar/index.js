@@ -1,27 +1,16 @@
 import React, { useState, useEffect } from "react";
-import classes from "./Navbar.module.scss";
+import { setLanguage } from "../../util/lang";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import classes from "./Navbar.module.scss";
 
 const Navbar = ({ language, setLang }) => {
-  const [isActive, setActive] = useState(false);
+  const [isActive, setActive] = useState(false); //controls when to show slide menu
   const [isScrolled, setScrolled] = useState(false);
 
-  const setLanguage = (lang) => {
-    switch (lang) {
-      case "Spanish":
-        return {
-          list: ["Inicio", "Citas", "Servicios", "Tienda"],
-        };
-      default:
-        return {
-          list: ["Home", "Appointments", "Services", "Shop"],
-        };
-    }
-  };
-
-  let { list } = setLanguage(language);
-  let navMenu = list.map((li) => <li key={li}>{li}</li>);
+  const { navbar } = setLanguage(language);
+  const { list } = navbar;
+  const navMenu = list.map((li) => <li key={li}>{li}</li>);
 
   useEffect(() => {
     const scroll = (e) => {

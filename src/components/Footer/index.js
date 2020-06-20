@@ -1,32 +1,11 @@
 import React from "react";
+import { setLanguage } from "../../util/lang";
 import classes from "./Footer.module.scss";
 
 const Footer = ({ language }) => {
-  const setLanguage = (lang) => {
-    switch (lang) {
-      case "Spanish":
-        return {
-          hours: "Horas",
-          location: "Dirección",
-          weekdays: "Lunes - Viernes",
-          saturday: "Sabado",
-          sunday: "Domingo",
-          closed: "cerrado",
-        };
-      default:
-        return {
-          hours: "Hours",
-          location: "Location",
-          weekdays: "Monday - Friday",
-          saturday: "Saturday",
-          sunday: "Sunday",
-          closed: "closed",
-        };
-    }
-  };
-  let { hours, location, weekdays, saturday, sunday, closed } = setLanguage(
-    language
-  );
+  const { footer } = setLanguage(language);
+  const { hours, location, weekdays, saturday, sunday, closed } = footer;
+
   return (
     <footer className={classes.Footer}>
       <div className={classes.schedule}>
