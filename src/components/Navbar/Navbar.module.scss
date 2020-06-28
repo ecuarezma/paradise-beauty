@@ -44,6 +44,10 @@
   box-shadow: 0.5rem 0 1rem rgba(57, 57, 57, 0.5);
   transform: translateX(-110%);
   transition: all 300ms ease-in;
+  &.isActive {
+    transform: translateX(0);
+    transition: all 300ms ease-out;
+  }
 
   ul {
     margin: 0;
@@ -90,7 +94,17 @@
   }
 }
 
-.isActive {
-  transform: translateX(0);
-  transition: all 300ms ease-out;
+.sliderBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100vh;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 300ms ease-in-out;
+  z-index: -1;
+  &.isActive {
+    opacity: 1;
+  }
 }

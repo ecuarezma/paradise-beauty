@@ -29,14 +29,18 @@ const Navbar = ({ language, setLang }) => {
     };
   });
 
-  const handleClick = () => {
-    setActive(!isActive);
+  const handleOpen = () => {
+    setActive(true);
+  };
+
+  const handleClose = () => {
+    setActive(false);
   };
 
   return (
     <nav className={`${classes.Navbar} ${isScrolled && classes.scrolled}`}>
       <div className={classes.bars}>
-        <FontAwesomeIcon icon={faBars} onClick={handleClick} />
+        <FontAwesomeIcon icon={faBars} onClick={handleOpen} />
       </div>
       <div className={classes.selectLang}>
         <select
@@ -51,10 +55,14 @@ const Navbar = ({ language, setLang }) => {
 
       <div className={`${classes.Nav} ${isActive && classes.isActive} `}>
         <div className={classes.times}>
-          <FontAwesomeIcon icon={faTimes} onClick={handleClick} />
+          <FontAwesomeIcon icon={faTimes} onClick={handleClose} />
         </div>
         <ul>{navMenu}</ul>
       </div>
+      <div
+        className={`${classes.sliderBg} ${isActive && classes.isActive} `}
+        onClick={handleClose}
+      />
     </nav>
   );
 };
