@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { setLanguage } from "../../util/lang";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faTimes,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import classes from "./Navbar.module.scss";
 
 const Navbar = ({ language, setLang }) => {
@@ -10,7 +14,16 @@ const Navbar = ({ language, setLang }) => {
 
   const { navbar } = setLanguage(language);
   const { list } = navbar;
-  const navMenu = list.map((li) => <li key={li}>{li}</li>);
+  const navMenu = list.map((li) => {
+    if (list[3] === li)
+      return (
+        <li key={li}>
+          {li}
+          <FontAwesomeIcon icon={faChevronRight} className={classes.chevIcon} />
+        </li>
+      );
+    else return <li key={li}>{li}</li>;
+  });
 
   useEffect(() => {
     const scroll = (e) => {

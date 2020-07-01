@@ -6,7 +6,7 @@ export const setLanguage = (lang) => {
           temp: "bajo construcción",
         },
         navbar: {
-          list: ["Inicio", "Citas", "Servicios", "Tienda"],
+          list: ["Inicio", "Citas", "Productos", "Servicios"],
         },
         footer: {
           hours: "Horas",
@@ -23,7 +23,7 @@ export const setLanguage = (lang) => {
           temp: "under construction",
         },
         navbar: {
-          list: ["Home", "Appointments", "Services", "Shop"],
+          list: ["Home", "Appointments", "Products", "Services"],
         },
         footer: {
           hours: "Hours",
