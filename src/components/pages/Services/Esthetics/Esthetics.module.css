@@ -1,0 +1,14 @@
+.Esthetics img {
+  width: 100%;
+}
+
+.mask {
+  width: 100%;
+  height: 250px;
+  background-image: url("../../../../assets/unsplash/mask.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.nails {
+  background-image: url("../../../../assets/unsplash/nails.jpg");
+}
