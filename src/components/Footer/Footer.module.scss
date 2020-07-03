@@ -1,6 +1,9 @@
+@import "../styles/colorset";
+
 .Footer {
   height: 40vh;
-  font-family: "Quicksand", sans-serif;
+  border-top: 2px solid gray;
+  background-color: $iconPrimary;
   h4 {
     margin: 1rem;
     font-size: 1.25rem;

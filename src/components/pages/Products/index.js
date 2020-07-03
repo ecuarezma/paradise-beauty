@@ -1,5 +1,12 @@
 import React from "react";
 
 export default function Products() {
-  return <div>Products component</div>;
+  return (
+    <article>
+      <header>
+        <h2>Products</h2>
+      </header>
+      <hr />
+    </article>
+  );
 }
