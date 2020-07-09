@@ -42,6 +42,8 @@ export default function Hair() {
           <li>Perm</li>
           <li>Relaxer</li>
           <li>Capillary Surgery Botox</li>
+          <li>Brazilian Hair Botox</li>
+          <li>Brazilian Hair Masks</li>
         </ul>
         <br />
       </div>

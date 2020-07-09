@@ -15,9 +15,7 @@ export default function Esthetics() {
           <li>Gel Manicure</li>
           <li>Gel Removal</li>
           <li>Regular Pedicure</li>
-          <li>Spa Pedicure</li>
           <li>Men's Pedicure</li>
-          <li>Gel Pedicure</li>
           <li>Regular Manicure | Pedicure Combo</li>
           <li>Polish Change</li>
         </ul>
@@ -33,11 +31,6 @@ export default function Esthetics() {
           <li>Arm</li>
           <li>Leg</li>
           <li>Full Leg</li>
-          <li>Bikini</li>
-          <li>Back</li>
-          <li>Back | Shoulders</li>
-          <li>Naval Strip</li>
-          <li>Chest | Stomach</li>
         </ul>
       </div>
     </article>
