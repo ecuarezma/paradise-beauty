@@ -1,15 +1,14 @@
 import React from "react";
-import classes from "./Esthetics.module.css";
+import classes from "../Services.module.scss";
 
 export default function Esthetics() {
   return (
     <article>
-      <header>
+      <header className={classes.nailsBg}>
         <h2>Esthetics</h2>
       </header>
-      <div className={classes.nails} />
       <div className={classes.info}>
-        <h3>Nails</h3>
+        <h3>NAILS</h3>
         <ul>
           <li>Regular Manicure</li>
           <li>Men's Manicure</li>
@@ -23,7 +22,7 @@ export default function Esthetics() {
           <li>Polish Change</li>
         </ul>
         <br />
-        <h3>Waxing</h3>
+        <h3>WAXING</h3>
         <ul>
           <li>Eyebrow</li>
           <li>Lip</li>
