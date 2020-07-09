@@ -33,8 +33,8 @@ export default function Hair() {
           <li>Semi-Permanent Color</li>
           <li>Color Correction</li>
         </ul>
-        <h3>TREATMENTS</h3>
         <br />
+        <h3>TREATMENTS</h3>
         <ul>
           <li>Keratin</li>
           <li>Ultimate Treatment</li>
@@ -43,6 +43,7 @@ export default function Hair() {
           <li>Relaxer</li>
           <li>Capillary Surgery Botox</li>
         </ul>
+        <br />
       </div>
     </article>
   );
