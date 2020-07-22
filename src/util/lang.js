@@ -2,9 +2,6 @@ export const setLanguage = (lang) => {
   switch (lang) {
     case "Spanish":
       return {
-        home: {
-          temp: "bajo construcción",
-        },
         navbar: {
           list: ["Inicio", "Citas", "Productos", "Servicios"],
         },
@@ -19,9 +16,6 @@ export const setLanguage = (lang) => {
       };
     default:
       return {
-        home: {
-          temp: "under construction",
-        },
         navbar: {
           list: ["Home", "Appointments", "Products", "Services"],
         },

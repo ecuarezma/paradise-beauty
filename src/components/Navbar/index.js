@@ -52,9 +52,9 @@ const Navbar = ({ language, setLang }) => {
 
   return (
     <nav className={`${classes.Navbar} ${isScrolled && classes.scrolled}`}>
-      <div className={classes.bars}>
+      {/* <div className={classes.bars}>
         <FontAwesomeIcon icon={faBars} onClick={handleOpen} />
-      </div>
+      </div> */}
       <div className={classes.selectLang}>
         <select
           name="language"
@@ -66,7 +66,7 @@ const Navbar = ({ language, setLang }) => {
         </select>
       </div>
 
-      <div className={`${classes.Nav} ${isActive && classes.isActive} `}>
+      {/* <div className={`${classes.Nav} ${isActive && classes.isActive} `}>
         <div className={classes.times}>
           <FontAwesomeIcon icon={faTimes} onClick={handleClose} />
         </div>
@@ -75,7 +75,7 @@ const Navbar = ({ language, setLang }) => {
       <div
         className={`${classes.sliderBg} ${isActive && classes.isActive} `}
         onClick={handleClose}
-      />
+      /> */}
     </nav>
   );
 };
