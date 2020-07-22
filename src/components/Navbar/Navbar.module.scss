@@ -3,7 +3,8 @@
 .Navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between; //with slide menu
+  justify-content: flex-end; //without slide menu
   position: fixed;
   top: 0;
   z-index: 1000;
