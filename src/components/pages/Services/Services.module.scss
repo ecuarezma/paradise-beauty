@@ -58,15 +58,29 @@ header {
 .info {
   color: $textDark;
   text-align: center;
-}
-
-.products {
-  margin: 1rem 1rem 4rem 1rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  li {
-    margin: 0 0.4rem;
+  ul {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 0;
+    list-style: none;
+    line-height: 2.5rem;
+  }
+  .products {
+    margin: 1rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    div {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+    li {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -74,12 +88,64 @@ h3 {
   margin: 2rem auto;
   font-size: 1.5rem;
 }
-ul {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin: 0;
-  margin-bottom: 2rem;
-  padding: 0;
-  list-style: none;
-  line-height: 2.5rem;
+
+@media (min-width: 1000px) {
+  .Services {
+    h4 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+  }
+  header {
+    h2 {
+      font-size: 4rem;
+    }
+    &.nailsBg {
+      height: 300px;
+    }
+    &.hairBg {
+      height: 350px;
+      background-position: 0 25%;
+    }
+    &.skinBg {
+      height: 350px;
+      background-position: 0 33%;
+    }
+    &.bottleBg {
+      height: 350px;
+    }
+  }
+
+  .info {
+    width: 75%;
+    margin: 0 auto;
+    color: $textDark;
+    text-align: center;
+    ul {
+      line-height: 3rem;
+      font-size: 1.5rem;
+    }
+    .products {
+      margin: 1rem;
+      margin-bottom: 4rem;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      div {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+      }
+      li {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  h3 {
+    margin: 2rem auto;
+    font-size: 2rem;
+  }
 }
