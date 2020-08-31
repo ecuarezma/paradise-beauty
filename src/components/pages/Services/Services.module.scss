@@ -71,11 +71,10 @@ header {
     margin: 1rem;
     margin-bottom: 4rem;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
     div {
       display: flex;
-      flex-flow: column;
       justify-content: space-between;
     }
   }
