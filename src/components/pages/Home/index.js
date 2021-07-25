@@ -10,7 +10,7 @@ const Home = () => {
         <h1>
           Paradise Beauty <br /> Salon
         </h1>
-        <h4>tel: 305.403.5021</h4>
+        <h4>tel: 786.295.9742</h4>
       </header>
       <div className={classes.bgImage}>
         <img src={salonChairs} alt="Row of salon chairs facing away" />
