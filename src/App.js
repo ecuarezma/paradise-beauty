@@ -4,7 +4,7 @@ import Home from "./components/pages/Home/";
 import Products from "./components/pages/Products";
 import Services from "./components/pages/Services";
 import Footer from "./components/Footer";
-import "./App.scss";
+import "./App.css";
 
 const App = () => {
   const [language, setLanguage] = useState("English");
