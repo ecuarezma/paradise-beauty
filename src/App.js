@@ -1,27 +1,25 @@
-import React, { useState } from "react";
-import Navbar from "./components/Navbar";
-import Home from "./components/pages/Home/";
-import Products from "./components/Products";
-import Services from "./components/Services";
-import Footer from "./components/Footer";
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import Home from "./components/pages/Home";
+import Nails from "./components/pages/Nails";
+
+import RootLayout from "./components/Layouts/RootLayout";
+
 import "./App.css";
 
-const App = () => {
-  const [language, setLanguage] = useState("English");
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    // errorElement: <ErrorPage />
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/nails", element: <Nails /> },
+    ],
+  },
+]);
 
-  const setLang = (lang) => {
-    setLanguage(lang);
-  };
-
-  return (
-    <>
-      <Navbar language={language} setLang={setLang} />
-      <Home language={language} />
-      <Services />
-      <Products />
-      <Footer language={language} />
-    </>
-  );
-};
+const App = () => <RouterProvider router={router} />;
 
 export default App;

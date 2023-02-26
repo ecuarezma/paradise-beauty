@@ -1,0 +1,17 @@
+.Container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 75%;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  div{
+    display: flex;
+    width: 30%;
+    margin: 1rem;
+    img{
+      height: 100%;
+    }
+  }
+}

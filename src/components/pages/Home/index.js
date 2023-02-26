@@ -1,4 +1,7 @@
 import React from "react";
+import Services from "../../Services";
+import Products from "../../Products";
+
 import classes from "./Home.module.scss";
 
 import salonChairs from "../../../assets/unsplash/salonchairs.jpg";
@@ -15,6 +18,8 @@ const Home = () => {
       <div className={classes.bgImage}>
         <img src={salonChairs} alt="Row of salon chairs facing away" />
       </div>
+      <Services />
+      <Products />
     </div>
   );
 };
