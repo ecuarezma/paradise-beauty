@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "../Services.module.scss";
 
 export default function Esthetics() {
@@ -9,6 +10,7 @@ export default function Esthetics() {
       </header>
       <div className={classes.info}>
         <h3>NAILS</h3>
+
         <ul>
           <li>Regular Manicure</li>
           <li>Men's Manicure</li>
@@ -19,6 +21,11 @@ export default function Esthetics() {
           <li>Regular Manicure | Pedicure Combo</li>
           <li>Polish Change</li>
         </ul>
+        <Link to="/nails" className="button" style={{ color: "#4287f5" }}>
+          See Gallery
+        </Link>
+        <br />
+        <br />
         <br />
         <h3>WAXING</h3>
         <ul>

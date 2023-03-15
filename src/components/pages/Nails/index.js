@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import nails1 from "../../../assets/images/nails/nails1.jpg";
 import nails2 from "../../../assets/images/nails/nails2.jpg";
 import nails3 from "../../../assets/images/nails/nails3.jpg";
@@ -24,12 +25,24 @@ let imageFiles = [
 
 const Nails = () => {
   const images = imageFiles.map((image, i) => (
-    <div key={i}>
+    <div key={i} className={classes.Image}>
       <img src={image} alt="salon nails" />
     </div>
   ));
 
-  return <div className={classes.Container}>{images}</div>;
+  return (
+    <div className={classes.Container}>
+      <div className={classes.GoBackBtn}>
+        <Link to="/" className="button">
+          Go Back
+        </Link>
+      </div>
+      <h3>
+        Nails by <span>Yemisi</span>
+      </h3>
+      <section className={classes.ImageContainer}>{images}</section>
+    </div>
+  );
 };
 
 export default Nails;

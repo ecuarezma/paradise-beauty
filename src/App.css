@@ -8,3 +8,21 @@ font-family: 'Quicksand', sans-serif; (light 300 and regular 400) */
 .App {
   text-align: center;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.25rem;
+}
+
+a.button {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  outline: 2px solid rgb(167, 167, 167);
+  border-radius: 2px;
+  transition: ease-in-out 300ms;
+}
+
+a.button:hover {
+  outline: 2px solid rgb(130, 130, 130);
+  background-color: rgb(255, 227, 227);
+}

@@ -12,7 +12,7 @@ const RootLayout = () => {
 
   return (
     <>
-      <Navbar language={language} setLang={setLang} />
+      {/* <Navbar language={language} setLang={setLang} /> */}
       <main>
         <Outlet language={language} />
       </main>
