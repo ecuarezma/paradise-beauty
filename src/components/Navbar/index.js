@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { setLanguage } from "../../util/lang";
+import { LanguageContext } from "../contexts/lang.context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -8,10 +9,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import classes from "./Navbar.module.scss";
 
-const Navbar = ({ language, setLang }) => {
+const Navbar = ({ language }) => {
   const [isActive, setActive] = useState(false); //controls when to show slide menu
   const [isScrolled, setScrolled] = useState(false);
-
+  const { changeLang } = useContext(LanguageContext);
   const { navbar } = setLanguage(language);
   const { list } = navbar;
   const navMenu = list.map((li) => {
@@ -28,17 +29,16 @@ const Navbar = ({ language, setLang }) => {
   useEffect(() => {
     const scroll = (e) => {
       const el = document.querySelector("nav");
-      if (e.target.documentElement.scrollTop > el.offsetHeight) {
-        // check scrollTop element to see if there's one that works on mobile or iOS
+      const { documentElement } = e.target;
+      if (documentElement.scrollTop > el.offsetHeight) {
         setScrolled(true);
       } else setScrolled(false);
-      // console.log(e.target.documentElement.scrollTop);
     };
     //add event listeners
-    document.addEventListener("scroll", scroll);
+    document.addEventListener("scroll", scroll, true);
     //clean up function, remove event listener
     return () => {
-      document.removeEventListener("scroll", scroll);
+      document.removeEventListener("scroll", scroll, true);
     };
   });
 
@@ -59,7 +59,7 @@ const Navbar = ({ language, setLang }) => {
         <select
           name="language"
           id="lang-select"
-          onChange={(e) => setLang(e.target.value)}
+          onChange={(e) => changeLang(e.target.value)}
         >
           <option value="English">ENGLISH</option>
           <option value="Spanish">ESPAÑOL</option>
