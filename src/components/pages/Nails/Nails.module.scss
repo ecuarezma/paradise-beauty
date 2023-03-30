@@ -1,5 +1,6 @@
 .GoBackBtn{
   margin: 2rem;
+  text-align: center;
 }
 h3 {
   width: 100%;
@@ -14,6 +15,7 @@ h3 {
 .ImageContainer{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto;
   width: 60%;
   .Image{

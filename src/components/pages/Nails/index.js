@@ -12,15 +12,15 @@ const Nails = () => {
 
   return (
     <div className={classes.Container}>
+      <h3>
+        Nails by <span>Yemisi</span>
+      </h3>
+      <section className={classes.ImageContainer}>{images}</section>
       <div className={classes.GoBackBtn}>
         <Link to=".." relative="path" className="button">
           Go Back
         </Link>
       </div>
-      <h3>
-        Nails by <span>Yemisi</span>
-      </h3>
-      <section className={classes.ImageContainer}>{images}</section>
     </div>
   );
 };
