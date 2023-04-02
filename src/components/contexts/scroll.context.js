@@ -1,11 +1,14 @@
 import { React, createContext, useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export const ScrollEventContext = createContext();
 
 export function ScrollEventProvider({ children }) {
+  const pathLocation = useLocation();
   const [isScrolled, setScrolled] = useState(false);
   useEffect(() => {
     const { id } = children.props;
+    if (pathLocation.pathname !== "/") return;
     const scroll = (e) => {
       const el = document.querySelector(`#${id}`);
       const { documentElement } = e.target;
