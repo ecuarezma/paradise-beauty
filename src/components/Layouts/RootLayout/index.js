@@ -3,12 +3,15 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../../Navbar";
 import Footer from "../../Footer";
 import { LanguageContext } from "../../contexts/lang.context";
+import { ScrollEventProvider } from "../../contexts/scroll.context";
 
 const RootLayout = () => {
   const { language } = useContext(LanguageContext);
   return (
     <>
-      <Navbar language={language} />
+      <ScrollEventProvider>
+        <Navbar language={language} id="navbar" />
+      </ScrollEventProvider>
       <main>
         <Outlet language={language} />
       </main>

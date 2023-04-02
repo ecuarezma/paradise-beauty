@@ -10,21 +10,16 @@
   z-index: 1000;
   width: 100vw;
   transition: all 300ms ease-in-out 300ms;
-  &.scrolled {
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 0 5px 14px rgba(57, 57, 57, 0.8);
-    background-color: rgba($iconPrimary, 0.8);
-    transition: all 300ms ease-in-out;
-    .bars svg {
-      color: rgb(65, 39, 39);
-      transition-delay: 0ms;
-    }
-    .selectLang {
-      color: rgb(65, 39, 39);
-      border-color: rgb(65, 39, 39);
-      transition-delay: 0ms;
-    }
-  }
+  // &.scrolled {
+  //   /* offset-x | offset-y | blur-radius | spread-radius | color */
+  //   box-shadow: 0 5px 14px rgba(57, 57, 57, 0.8);
+  //   background-color: rgba($iconPrimary, 0.8);
+  //   transition: all 300ms ease-in-out;
+  //   .bars svg {
+  //     color: rgb(65, 39, 39);
+  //     transition-delay: 0ms;
+  //   }
+  // }
 }
 
 .Nav {
@@ -75,27 +70,6 @@
 .chevIcon {
   margin-left: 0.75rem;
   font-size: 1.25rem;
-}
-
-.selectLang {
-  font-family: "Quicksand", sans-serif;
-  color: $iconPrimary;
-  margin: 1rem 2rem 1rem 0;
-  padding: 0.2rem 0.5rem;
-  border: 1px solid $iconPrimary;
-  border-radius: 1rem;
-  transition: all 300ms ease-in-out 550ms;
-  cursor: pointer;
-  select {
-    all: unset;
-  }
-  option{
-    color: $textDark;
-    
-  }
-  @media (max-width: 400px){
-    margin: 1rem;
-  }
 }
 
 .times {
